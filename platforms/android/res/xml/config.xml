@@ -35,8 +35,8 @@
         <param name="android-package" value="org.chromium.ChromeStorage" />
     </feature>
     <name>SAILS alpha</name>
-    <description />
-    <author />
+    <description>SAILS</description>
+    <author>Projet PRE</author>
     <preference name="KeyboardShrinksView" value="true" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#000000" />

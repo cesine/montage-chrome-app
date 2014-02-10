@@ -98,6 +98,7 @@ case "$TARGET_LC" in
     TARGET_FLAG="--family ipad --retina"
     ;;
 esac
+TARGET_FLAG="--family ipad"
 
 CORDOVA_PATH=$( cd "$( dirname "$0" )" && pwd -P)
 PROJECT_PATH="$(dirname "$CORDOVA_PATH")"
