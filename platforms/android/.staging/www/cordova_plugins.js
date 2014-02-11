@@ -205,6 +205,20 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.media/www/MediaError.js",
+        "id": "org.apache.cordova.media.MediaError",
+        "clobbers": [
+            "window.MediaError"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.media/www/Media.js",
+        "id": "org.apache.cordova.media.Media",
+        "clobbers": [
+            "window.Media"
+        ]
+    },
+    {
         "file": "plugins/org.chromium.common/events.js",
         "id": "org.chromium.common.events",
         "clobbers": [
@@ -267,6 +281,7 @@ module.exports.metadata =
     "org.chromium.polyfill.CustomEvent": "1.0.0",
     "org.chromium.polyfill.xhr_features": "1.0.0",
     "org.chromium.polyfill.blob_constructor": "1.0.0",
+    "org.apache.cordova.media": "0.2.7",
     "org.chromium.common": "1.0.1",
     "org.chromium.storage": "1.0.1",
     "org.chromium.runtime": "1.0.1"

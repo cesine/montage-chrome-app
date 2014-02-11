@@ -53,6 +53,7 @@
 		4CBFD554120743C0A87FCBAB /* ChromeBootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 343D2C07AB964067853F6C26 /* ChromeBootstrap.m */; };
 		CD376278C6AE439FBA8498D1 /* ChromeExtensionURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = C92DE1EE25FB4F3197D3E061 /* ChromeExtensionURLs.m */; };
 		C308C429B6D245C49963C72E /* ChromeI18n.m in Sources */ = {isa = PBXBuildFile; fileRef = CD21E8CCD98D4C1681E6B6D7 /* ChromeI18n.m */; };
+		6FE4C7FF9F1541FF82928564 /* CDVSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CB40060AE843FE8CB10838 /* CDVSound.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,8 @@
 		C92DE1EE25FB4F3197D3E061 /* ChromeExtensionURLs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ChromeExtensionURLs.m"; path = "org.chromium.bootstrap/ChromeExtensionURLs.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		CD21E8CCD98D4C1681E6B6D7 /* ChromeI18n.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ChromeI18n.m"; path = "org.chromium.i18n/ChromeI18n.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		3302640BB8C7472D984A68CF /* ChromeI18n.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ChromeI18n.h"; path = "org.chromium.i18n/ChromeI18n.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		20CB40060AE843FE8CB10838 /* CDVSound.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVSound.m"; path = "org.apache.cordova.media/CDVSound.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		E2A6CF249D1D4A07AC0C9C51 /* CDVSound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVSound.h"; path = "org.apache.cordova.media/CDVSound.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +293,8 @@
 				C92DE1EE25FB4F3197D3E061 /* ChromeExtensionURLs.m */,
 				CD21E8CCD98D4C1681E6B6D7 /* ChromeI18n.m */,
 				3302640BB8C7472D984A68CF /* ChromeI18n.h */,
+				20CB40060AE843FE8CB10838 /* CDVSound.m */,
+				E2A6CF249D1D4A07AC0C9C51 /* CDVSound.h */,
 			);
 			name = Plugins;
 			path = "SAILS alpha/Plugins";
@@ -498,6 +503,7 @@
 				4CBFD554120743C0A87FCBAB /* ChromeBootstrap.m in Sources */,
 				CD376278C6AE439FBA8498D1 /* ChromeExtensionURLs.m in Sources */,
 				C308C429B6D245C49963C72E /* ChromeI18n.m in Sources */,
+				6FE4C7FF9F1541FF82928564 /* CDVSound.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
