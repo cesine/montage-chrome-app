@@ -28,7 +28,6 @@ import org.apache.cordova.LOG;
 import android.annotation.TargetApi;
 import android.net.Uri;
 import android.os.Build;
-import android.util.Log;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebView;
 
@@ -44,44 +43,9 @@ public class IceCreamCordovaWebViewClient extends CordovaWebViewClient {
     public IceCreamCordovaWebViewClient(CordovaInterface cordova, CordovaWebView view) {
         super(cordova, view);
     }
-    
-    @Override
-    public boolean shouldOverrideUrlLoading(WebView view, String url){
-        if(url.endsWith(".mp3")){
-//http://stackoverflow.com/questions/10966245/android-playing-an-asset-sound-using-webview
-//        	 url = url.replace("file:///android_asset/webpages/", "");
-//             Log.i("MyWebViewClient", url);
-//             try {
-//                 AssetFileDescriptor afd = context.getAssets().openFd(url);
-//                 mp = new MediaPlayer();
-//                 mp.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
-//                 afd.close();
-//                 mp.prepare();
-//                 mp.start();
-//             } catch (IllegalArgumentException e) {
-//                 // TODO Auto-generated catch block
-//                 e.printStackTrace();
-//             } catch (IllegalStateException e) {
-//                 // TODO Auto-generated catch block
-//                 e.printStackTrace();
-//             } catch (IOException e) {
-//                 // TODO Auto-generated catch block
-//                 e.printStackTrace();
-//             }
-             
-        	Log.v("DebuggingAudio", " this is an audio file!"+url);
-            return super.shouldOverrideUrlLoading(view, url);
-        }else{
-        	Log.v("DebuggingAudio", " this is NOT audio file!"+url);
-            return super.shouldOverrideUrlLoading(view, url);
-        }
-    }
-    
-    
+
     @Override
     public WebResourceResponse shouldInterceptRequest(WebView view, String url) {
-    	Log.v(TAG, " shouldInterceptRequest!"+url);
-
         try {
             // Check the against the white-list.
             if ((url.startsWith("http:") || url.startsWith("https:")) && !Config.isUrlWhiteListed(url)) {
@@ -111,8 +75,6 @@ public class IceCreamCordovaWebViewClient extends CordovaWebViewClient {
     }
 
     private static boolean needsSpecialsInAssetUrlFix(Uri uri) {
-    	Log.v(TAG, " needsSpecialsInAssetUrlFix!"+uri);
-
         if (CordovaResourceApi.getUriType(uri) != CordovaResourceApi.URI_TYPE_ASSET) {
             return false;
         }
