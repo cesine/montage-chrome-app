@@ -546,7 +546,30 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
             }
                 this.setState(STATE.MEDIA_STARTING);
                 this.player.setOnPreparedListener(this);
-                this.player.prepare();
+				try {
+					this.player.prepare();
+				} catch (Exception e) {
+					Log.v("DebuggingAudio",
+							"Exception while preparing the audio file " + file);
+					e.printStackTrace();
+	
+					/* try it in the assets folder */
+					file = "www/" + file;
+					try {
+						android.content.res.AssetFileDescriptor fd = this.handler.cordova
+								.getActivity().getAssets().openFd(file);
+						this.player.setDataSource(fd.getFileDescriptor(),
+								fd.getStartOffset(), fd.getLength());
+						this.setState(STATE.MEDIA_STARTING);
+						this.player.setOnPreparedListener(this);
+						this.player.prepare();
+					} catch (Exception ex) {
+						Log.v("DebuggingAudio",
+								"Exception while preparing the audio file and assuming its in the assets folder "
+										+ file);
+						ex.printStackTrace();
+					}
+				}
 
                 // Get duration
                 this.duration = getDurationInSeconds();
