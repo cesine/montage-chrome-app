@@ -65,4 +65,7 @@
     <preference name="iosPersistentFileLocation" value="Library" />
     <preference name="AndroidPersistentFileLocation" value="Internal" />
     <content src="plugins/org.chromium.bootstrap/chromeapp.html" />
+    <feature name="Media">
+        <param name="ios-package" value="CDVSound" />
+    </feature>
 </widget>
